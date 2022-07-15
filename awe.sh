@@ -33,7 +33,8 @@ systemctl enable redis-server --quiet
 
 wo stack install --php74
 
-update-alternatives --config php /usr/bin/php7.4
+update-alternatives --set php /usr/bin/php7.4
+service nginx restart
 
 printf "${ORANGE} Updating conf files ${NC}\n";
 git clone https://github.com/WPoets/conf.git $HOME/wpoets-conf
